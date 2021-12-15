@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RolesService } from 'src/app/services/roles.service';
 
 @Component({
   selector: 'app-tienda',
@@ -6,10 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tienda.component.css']
 })
 export class TiendaComponent implements OnInit {
+  RolesSoftware?: any;
 
-  constructor() { }
+  constructor(private rolService: RolesService) { }
 
   ngOnInit(): void {
+  this.getServicesList();  
   }
 
+  getServicesList(): void {
+  this.rolService.getRoles()
+      .subscribe(
+        data => {
+          this.RolesSoftware =  data;
+          this.RolesSoftware = this.RolesSoftware.data;
+          console.log(this.RolesSoftware);
+        },
+        error => {
+          console.log(error);
+        }); 
+  }
 }
