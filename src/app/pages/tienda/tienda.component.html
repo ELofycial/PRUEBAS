@@ -8,22 +8,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
+      <tr *ngFor="let rol of RolesSoftware | objToAwway; let i = index">
+        <th scope="row">{{rol.id}}</th>
+        <td>{{rol.nombre}}</td>
+        <td>{{rol.descripcion}}</td>
+        <td>{{rol.created_at}}</td>
       </tr>
     </tbody>
   </table>

@@ -6,7 +6,7 @@ import { ObjToAwwayPipe } from './obj-to-awway.pipe';
 
 @NgModule({
   imports: [
-    //CommonModule
+    CommonModule
   ],
   declarations: [
     ObjToAwwayPipe

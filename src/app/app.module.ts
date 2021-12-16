@@ -5,13 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PagesModule } from './pages/pages.module';
 import { PagenotfoundComponent } from './error/pagenotfound/pagenotfound.component';
-import { ObjToAwwayPipe } from './pipes/obj-to-awway.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     PagenotfoundComponent,
-    ObjToAwwayPipe,
   ],
   imports: [
     BrowserModule,
